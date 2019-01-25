@@ -88,6 +88,7 @@ std::string MapKey::argument_value(BPFtrace &bpftrace,
     case Type::string:
       return std::string((char*)data);
   }
+  std::cerr << "Invalid mapkey argument type" << std::endl;
   abort();
 }
 

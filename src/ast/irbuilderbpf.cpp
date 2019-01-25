@@ -123,6 +123,7 @@ llvm::Type *IRBuilderBPF::GetType(const SizedType &stype)
         ty = getInt8Ty();
         break;
       default:
+        std::cerr << "GetType: " << stype.size << " is not a valid type size" << std::endl;
         abort();
     }
   }
